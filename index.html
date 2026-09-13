@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adem | Personal Portfolio</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:#0b0f14;color:#f5f7fa;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin:auto}
+    nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(11,15,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid #202833}
+    nav .inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:24px;font-weight:800;letter-spacing:.5px}
+    .logo span{color:#62a8ff}
+    nav ul{display:flex;gap:25px;list-style:none;font-size:14px}
+    nav li a:hover{color:#62a8ff}
+    .hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding-top:90px}
+    .tag{display:inline-block;border:1px solid #2b3949;border-radius:999px;padding:7px 13px;color:#a9c8eb;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(44px,7vw,78px);line-height:1.02;margin-bottom:18px}
+    h1 span{color:#62a8ff}
+    .hero p{color:#aeb8c5;max-width:580px;font-size:18px}
+    .buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .btn{padding:12px 19px;border-radius:10px;border:1px solid #334150;font-weight:700}
+    .primary{background:#62a8ff;color:#08101a;border-color:#62a8ff}
+    .secondary:hover{border-color:#62a8ff}
+    .photo-wrap{display:flex;justify-content:center}
+    .photo-wrap img{width:min(390px,85vw);aspect-ratio:1/1;object-fit:cover;border-radius:28px;border:1px solid #344251;box-shadow:0 25px 80px rgba(0,0,0,.45)}
+    section{padding:100px 0;border-top:1px solid #18202a}
+    .section-title{font-size:36px;margin-bottom:14px}
+    .section-sub{color:#9eabb9;margin-bottom:35px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .card{background:#111820;border:1px solid #202c38;border-radius:18px;padding:28px}
+    .card h3{margin-bottom:10px}
+    .card p{color:#aeb8c5}
+    .skills{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .skill{padding:10px 14px;background:#18222d;border:1px solid #2a3948;border-radius:10px;color:#dce7f2}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{min-height:190px}
+    .project .num{font-size:13px;color:#62a8ff;margin-bottom:20px}
+    .project h3{font-size:21px;margin-bottom:8px}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contact-item{padding:22px;border:1px solid #202c38;border-radius:15px;background:#111820}
+    .contact-item small{display:block;color:#7f8d9c;margin-bottom:5px}
+    footer{text-align:center;padding:35px;color:#788695;border-top:1px solid #18202a}
+    @media(max-width:800px){
+      nav ul{display:none}
+      .hero,.about,.contact{grid-template-columns:1fr}
+      .hero{padding-top:120px;text-align:center}
+      .hero p{margin:auto}
+      .buttons{justify-content:center}
+      .projects{grid-template-columns:1fr}
+      .photo-wrap{order:-1}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="inner container">
+    <a class="logo" href="#home">Adem<span>.</span></a>
+    <ul>
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <section id="home">
+    <div class="hero container">
+      <div>
+        <div class="tag">PERSONAL PORTFOLIO</div>
+        <h1>Salut, je suis <span>Adem</span>.</h1>
+        <p>Étudiant passionné par la conception mécanique, les technologies et l'automobile. Je développe mes compétences en SolidWorks et AutoCAD et j'aime transformer des idées en projets concrets.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">Voir mes projets</a>
+          <a class="btn secondary" href="#contact">Me contacter</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <img src="profile.webp" alt="Photo de Adem">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">À propos de moi</h2>
+      <p class="section-sub">Un petit aperçu de mon profil et de mes centres d'intérêt.</p>
+      <div class="about">
+        <div class="card">
+          <h3>Mon profil</h3>
+          <p>Je suis un jeune étudiant intéressé par la mécanique, la conception assistée par ordinateur et les projets techniques. Mon objectif est de continuer à apprendre et à développer une expérience solide.</p>
+        </div>
+        <div class="card">
+          <h3>Mes intérêts</h3>
+          <p>Conception mécanique, automobile, réparation, nouvelles technologies et projets pratiques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Compétences</h2>
+      <p class="section-sub">Les outils et domaines que je développe.</p>
+      <div class="card">
+        <div class="skills">
+          <div class="skill">SolidWorks</div>
+          <div class="skill">AutoCAD</div>
+          <div class="skill">Conception mécanique</div>
+          <div class="skill">Dessin technique</div>
+          <div class="skill">Mécanique</div>
+          <div class="skill">Projets pratiques</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Mes projets</h2>
+      <p class="section-sub">Une section prête à recevoir tes futurs travaux.</p>
+      <div class="projects">
+        <div class="card project">
+          <div class="num">01</div>
+          <h3>Conception 3D</h3>
+          <p>Modèles et pièces réalisés avec SolidWorks.</p>
+        </div>
+        <div class="card project">
+          <div class="num">02</div>
+          <h3>Dessin technique</h3>
+          <p>Plans et conceptions techniques avec AutoCAD.</p>
+        </div>
+        <div class="card project">
+          <div class="num">03</div>
+          <h3>Projet personnel</h3>
+          <p>Un espace pour présenter ton prochain projet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Ajoute ici tes coordonnées quand tu seras prêt.</p>
+      <div class="contact">
+        <div class="contact-item"><small>Email</small>À ajouter</div>
+        <div class="contact-item"><small>Instagram</small>À ajouter</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Adem — Personal Portfolio</footer>
+</body>
+</html>
